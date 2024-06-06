@@ -46,3 +46,56 @@ In questa lezione si affronteranno i cicli `while` e `do while` tipici del lingu
 - logica dei cicli: ripetizione delle operazioni per un numero non noto di volte, logica precondizionale e postcondizionale
 - il ciclo `while` con esempi e analisi di funzionamento
 - il ciclo `do while` con esempi e analisi di funzionamento
+
+### Esercizi in aula
+- stampare i primi 100 numeri positivi e negativi (da 0 a 100 e da 0 a -100)
+- stampare i primi 50 numeri pari e dispari
+- stampare i primi 20 multipli di 15 e di 27
+- dalla pagina wikipedia dell'algoritmo di ordinamento Shell Sort ([link](https://it.wikipedia.org/wiki/Shell_sort)) ricavare l'espressione della successione di Knuth e calcolarne i primi 20 termini (soluzione: l'n-esimo elemento è tre volte il precedente incrementato di uno)
+
+## Lezione 3
+In questa lezione si affronteranno due elementi fondamentali della programmazione (in generale); i vettori (o _array_) e i cicli `for`, a questi andremo ad affiancare il `foreach` tipico di PHP e di altri linguaggi ad alto livello.
+
+### Teoria
+- array: cosa sono e perché sono utili
+- gli array "classici" e gli array associativi, dichiarazione in PHP e il loro scorrimento
+- le funzioni:
+	* `array_exist_key()`
+	* `array_search()`
+	* `array_keys()` e `array_values()`
+	* `array_combine()`
+- i cicli `for` visti per iterare matematicamente e per scorrere un array
+- il ciclo `foreach` per scorrere un vettore "classico" e un vettore associativo
+
+### Esercizi in aula
+- costruire un array secondo le seguenti specifiche mediante l'uso di un ciclo `for`:
+    * ha dimensione N = 25
+    * alla posizione 0 ha valore N
+    * alla posizione i ha valore N-i
+    * alla posizione N-1 ha valore 0
+- dichiarare il seguente array associativo secondo le seguenti specifiche:
+    * il nome è **\$province**
+    * le chiavi sono delle stringhe di due caratteri maiuscoli che rappresentano la sigla della provincia
+    * i valori sono le corrispondenti province espressi come stringhe formattate con la prima lettera maiuscola e la restante parte minuscola
+    * la dimensione del vettore è 5
+- iterare mediante un ciclo sul vettore **\$province** stampando una struttura HTML a piacere (tabella, elenco puntato, ...) che riporti la sigla della provincia e il nome della stessa
+- dichiarare ora un altro vettore chiamato **\$province2** che a differenza del precedente vettore **\$province** non è formattato usando una struttura `$chiave => $valore` ma è semplicemente un vettore "classico" al cui interno sono presenti anche alcune province non inserite precedentemente (rispettando sempre la dimensione pari a 5); a questo punto iterare mediante un ciclo `foreach` sui valori di **\$province2** e, mediante la funzione `array_key_search()`, stabilire se ognuna delle province è presente anche nell'array **\$province2**; in tal caso stamparne la sigla, altrimenti stampare una dicitura di errore.
+
+
+## Lezione 4
+In questa lezione si ultimerà la parte relativa alla pura programmazione in PHP; a seguito di questa le lezioni verteranno sulla scrittura di codice PHP all'interno di progetti che integrano HTML, CSS, JavaScript e MySQL. In questa lezione verranno trattate le funzioni e le istruzioni `require` e `require_once` per integrare il codice presente in più pagine.
+
+### Teoria
+- cos'è una funzione e perché è utile
+- come dichiarare e usare una funzione
+- parametri e valori restituiti da una funzione
+- le variabili globali
+- l'istruzione `require` con esempi
+- il problema del riuso e l'istruzione `require_once`
+- la funzione `header()`
+
+### Esercizi in aula
+- scrivere una funzione che, date due stringhe verifichi se le stesse sono identiche usando un approccio _C-like_ (ovvero confrontando carattere per carattere); nel caso in cui queste fossero identiche restituire 0, altrimenti restituire una stringa contenente i primi due caratteri diversi
+- scrivere una funzione che, dato come parametro un numero, restituisca la somma dello stesso per un altro numero definito come variabile globale al di fuori della funzione
+- scrivere una funzione che, dato un numero, verifichi se lo stesso è pari o dispari; restituire un booleano (`true` per pari o `false` per dispari)
+- mediante l'istruzione `require` chiamare il file `richiesto.php` appositamente scritto per stampare una frase a piacere; una volta fatto ciò dichiarare dentro `richiesto.php` una variabile e verificare che la stessa sia accessibile dal file da cui è stato richiesto.
