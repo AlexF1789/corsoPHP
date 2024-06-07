@@ -99,3 +99,74 @@ In questa lezione si ultimerà la parte relativa alla pura programmazione in PHP
 - scrivere una funzione che, dato come parametro un numero, restituisca la somma dello stesso per un altro numero definito come variabile globale al di fuori della funzione
 - scrivere una funzione che, dato un numero, verifichi se lo stesso è pari o dispari; restituire un booleano (`true` per pari o `false` per dispari)
 - mediante l'istruzione `require` chiamare il file `richiesto.php` appositamente scritto per stampare una frase a piacere; una volta fatto ciò dichiarare dentro `richiesto.php` una variabile e verificare che la stessa sia accessibile dal file da cui è stato richiesto.
+
+## Lezione 5
+In questa lezione si tratteranno i richiami alla programmazione _front-end_, in particolare verrà spiegato come integrare il codice PHP all'interno di una pagina HTML eventualmente comprensiva di codice CSS per la grafica e di parti JavaScript per la programmazione lato client.
+
+### Teoria
+- come possiamo usare PHP oltre che come linguaggio di programmazione classico
+- richiami di HTML, CSS e JavaScript (molto generali)
+- integrare il codice PHP nella pagina HTML (logica della pre-interpretazione del codice)
+- spiegazione iniziale dell'esercizio in aula (array annidati)
+
+### Esercizio in aula
+_Attenzione: prima di buttarsi a capofitto sulla risoluzione dell'esercizio leggere **attentamente** l'intera consegna; non viene infatti richiesto di creare un sito web statico come siete certamente già capaci ma di creare una base statica che verrà popolata di contenuti grazie al codice PHP_
+
+Costruire un sito web usando HTML, CSS e PHP che contenga le seguenti pagine:
+
+- _index.php_
+- generiche pagine _nomeProvincia.php_ (per esempio potrebbero esserci le pagine _torino.php_, _milano.php_, ...)
+- _dati.php_ che contenga le informazioni delle province sotto forma di array annidato
+
+Nella pagina **index.php** (ovvero la homepage del sito) dovranno comparire i seguenti elementi:
+
+- il titolo **Alcune province italiane**
+- un elenco puntato contenente i nomi delle province scelte (tali nomi dovranno essere dei collegamenti ipertestuali a ciascuna pagina _nomeProvincia.php_ specificate in precedenza)
+
+Nelle pagine **nomeProvincia.php** dovranno invece essere presenti:
+
+- il titolo contenente il nome della provincia
+- le informazioni relative alla provincia quali gli abitanti, la regione, la collocazione geografica, ... formattate in una tabella
+
+Si noti che per il front-end basta creare una pagina per le province e ricopiarla cambiando il nome ogni volta. Per l'aspetto grafico è possibile seguire l'immagine presente nella cartella `lezione5/demo/` di questo repository.
+
+Una volta realizzato il front-end si proceda a integrare il codice PHP come segue:
+
+- nella pagina _dati.php_ sarà presente un array annidato che associa a ogni nome di provincia un array contenente i dati (organizzati per _chiave parlante_ ovvero dove ogni chiave in formato stringa specifica il dato, per esempio alla chiave _Regione_ sarà associata la regione che contiene la provincia)
+- nella pagina _index.php_ l'elenco puntato sarà generato da un istruzione `foreach` che stamperà gli elementi dell'elenco puntato mediante un'istruzione `echo`
+- nelle pagine _nomeProvincia.php_ invece i campi della tabella saranno stampati attraverso un `echo` che stamperà ogni campo della tabella
+
+Naturalmente, essendo il vettore annidato dichiarato all'interno del file _dati.php_ servirà usare l'istruzione `require` per accedere ai dati contenuti nello stesso dalle altre pagine.
+
+## Lezione 6
+In questa lezione si approfondirà il legame tra HTML e PHP, aggiungendo anche qualche elemento di JavaScript
+
+### Teoria
+- il passaggio di dati mediante GET e POST e i relativi vettori
+- passare dei parametri mediante GET e POST, l'integrazione con i _form_ HTML
+- richiami di JavaScript e uso di Swal2 per le notifiche
+- alcuni elementi di programmazione a oggetti in PHP (sarà utile per la lezione successiva circa l'uso delle query SQL)
+- suggerimenti per svolgere l'esercizio in aula
+
+### Esercizio in aula
+Creare un sito web sfruttando HTML, CSS, JavaScript e PHP che contenga tre pagine:
+
+- una pagina `index.php` (ovvero la _homepage_ del sito) che mostri al suo interno due `form` HTML identici che richiedano i seguenti dati al visitatore:
+    * Cognome
+    * Nome
+    * Data di nascita
+    * Luogo di nascita
+    * Indirizzo email
+    * Numero di Telefono
+
+	Questi due `form` avranno come differenza grafica i bottoni di invio che saranno rispettivamente **GET** e **POST**
+
+- una pagina chiamata _schedaGET.php_ e una chiamata _schedaPOST.php_ che riportino in maniera identica i dati dell'utente formattati in una tabella e due tasti **\+** e **\-** che rispettivamente aprano una notifica Swal2 di successo e di errore (possiamo intendere il loro significato come approvazione o disapprovazione del profilo come per una candidatura per un posto di lavoro)
+
+Sebbene, a livello di front-end, le pagine siano identiche ciò che cambia è il back-end delle pagine; in particolare la prima pagina riceverà i dati come parametro GET mentre la seconda come parametro POST. Deduciamo perciò ora la necessità di avere due `form` separati nella pagina iniziale.
+
+Si noti quanto segue nella progettazione del back-end:
+
+ - entrambe le pagine dovranno verificare che tutti i dati siano stati recapitati; per farlo un approccio può essere quello di usare un vettore di comodo contenente il nome dei campi richiesti e iterare sullo stesso mediante un `foreach` che controlli con la funzione `array_key_exist()` sui campi dei vettori `$_GET` e `$_POST`
+- se dovessero mancare l'utente dovrà essere rimandato alla pagina iniziale (*feature extra:* sarebbe bello se l'utente ricevesse anche una notifica mediante Swal2 ma non è fondamentale, farlo solo se avanza tempo; in tal caso un approccio che si può seguire è quello di controllare la presenza di un parametro GET quale potrebbe essere `notify` fissato a un valore e, in tal caso, mediante `echo` stampare del codice JavaScript nella pagina)
+- il fatto che non sia specificata la necessità di una pagina di appoggio contenente i dati usati da entrambe le pagine non implica che questa non possa essere utilizzata; non è comunque un errore scrivere tutto il codice nelle due pagine _schedaGET.php_ e _schedaPOST.php_
