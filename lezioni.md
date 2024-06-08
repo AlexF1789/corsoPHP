@@ -170,3 +170,19 @@ Si noti quanto segue nella progettazione del back-end:
  - entrambe le pagine dovranno verificare che tutti i dati siano stati recapitati; per farlo un approccio può essere quello di usare un vettore di comodo contenente il nome dei campi richiesti e iterare sullo stesso mediante un `foreach` che controlli con la funzione `array_key_exist()` sui campi dei vettori `$_GET` e `$_POST`
 - se dovessero mancare l'utente dovrà essere rimandato alla pagina iniziale (*feature extra:* sarebbe bello se l'utente ricevesse anche una notifica mediante Swal2 ma non è fondamentale, farlo solo se avanza tempo; in tal caso un approccio che si può seguire è quello di controllare la presenza di un parametro GET quale potrebbe essere `notify` fissato a un valore e, in tal caso, mediante `echo` stampare del codice JavaScript nella pagina)
 - il fatto che non sia specificata la necessità di una pagina di appoggio contenente i dati usati da entrambe le pagine non implica che questa non possa essere utilizzata; non è comunque un errore scrivere tutto il codice nelle due pagine _schedaGET.php_ e _schedaPOST.php_
+
+## Lezione 7
+In questa lezione viene introdotto il legame tra PHP e basi di dati; in particolare si effettua un generale richiamo circa le basi di dati e su come effettuare le query da PHP.
+
+### Teoria
+- richiami di basi di dati: cosa sono e a cosa servono
+- perché è importante che le richieste vengano elaborate lato server
+- alcuni strumenti per gestire le basi di dati, presentazione di _phpMyAdmin_ e spiegazione di alcune sue funzioni fondamentali
+- come si effettua una query (richiami di sintassi _MySQL_)
+- la classe _mysqli_ con particolare riferimento ai metodi e alle funzioni:
+    * _num_rows_
+    * _mysqli_fetch_row_
+    * _query_
+- consigli per risolvere l'esercizio in aula
+
+### Esercizio in aula
