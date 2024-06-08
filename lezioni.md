@@ -214,3 +214,20 @@ In questa lezione verranno ultimate le informazioni relative alla costruzione di
 - consigli per la risoluzione dell'esercizio in aula
 
 ### Esercizio in aula
+Costruire una base di dati che contenga una tabella in grado di salvare le seguenti informazioni degli utenti registrati:
+
+- nome
+- cognome
+- indirizzo mail
+- password (salvata mediante un hash che segue l'algoritmo **SHA256**)
+
+Una volta creata tale base di dati costruire un sito web usando HTML, CSS e PHP in grado di mostrare all'utente un form di login (questo comprenderà dunque un campo per l'indirizzo mail e uno per la password) e una pagina denominata _areaRiservata.php_ all'interno della quale possa vedere i propri dati; tale pagina mostrerà anche un tasto per disconnettersi e tornare alla pagina di login.
+
+Si noti che le pagine da creare saranno in totale quattro:
+
+- la prima sarà la pagina _index.php_ contenente il form di login
+- la seconda sarà una pagina senza parte grafica chiamata _nuovaSessione.php_ che, ricevendo mediante POST i dati inseriti nella pagina _index.php_ effettuerà una query di estrazione dei dati e reindirizzerà l'utente alla pagina _index.php_ nel caso in cui il login fallisca oppure alla pagina _areaRiservata.php_ nel caso in cui il login avvenga con successo
+- la terza sarà la pagina _areaRiservata.php_
+- la quarta sarà una pagina chiamata _distruggiSessione.php_ che distruggerà la sessione e reindirizzerà alla pagina _index.php_
+
+Ovviamente sarà necessario predisporre una connessione alla base di dati mediante _mysqli_; per farlo è possibile usare il file `database.php` presente nella cartella _lezione8_ di questo repository richiedendolo dalla pagina _nuovaSessione.php_.
