@@ -231,3 +231,23 @@ Si noti che le pagine da creare saranno in totale quattro:
 - la quarta sarà una pagina chiamata _distruggiSessione.php_ che distruggerà la sessione e reindirizzerà alla pagina _index.php_
 
 Ovviamente sarà necessario predisporre una connessione alla base di dati mediante _mysqli_; per farlo è possibile usare il file `database.php` presente nella cartella _lezione8_ di questo repository richiedendolo dalla pagina _nuovaSessione.php_.
+
+## Possibili esercizi aggiuntivi
+I seguenti esercizi sono da ritenersi di puro approfondimento personale; richiedono infatti molto più tempo e risorse per essere realizzati ma consentono, a chi interessa, una maggiore focalizzazione degli elementi trattati.
+
+Per svolgerli è naturalmente possibile seguire per la programmazione PHP un approccio _C-like_ oppure, per approfondire meglio la conoscenza generale della programmazione e nello specifico del linguaggio PHP, programmando a oggetti. Per aiutarsi con la programmazione a oggetti può essere utile recuperare la lezione 6 (nello specifico l'ultima parte in cui vengono posti alcuni elementi di OOP) e la lezione aggiuntiva 1 (che verte sui concetti base della programmazione a oggetti con la loro codifica in linguaggio PHP).
+
+### Biblioteca
+Recuperare l'esercizio in aula della lezione 6 della biblioteca e creare un portale web realizzato con i linguaggi HTML, CSS, JavaScript, MySQL e PHP in grado di memorizzare i dati relativi ai volumi e quelli relativi ai bibliotecari.
+
+Il portale dovrà dare la possibilità ai bibliotecari di gestire i prestiti inserendoli o eliminandoli e i volumi in maniera analoga.
+
+I bibliotecari dovranno effettuare il login in un'apposita pagina e dovranno poter effettuare il logout. Come per l'esercizio in aula i dati circa i libri dovranno essere accessibili a tutti i visitatori del sito web in formato tabellare che includa l'eventuale prestito.
+
+### Registro elettronico
+Creare un portale web mediante i linguaggi HTML, CSS, JavaScript e PHP in grado di gestire alcuni studenti con le relative valutazioni; le valutazioni, salvate in una tabella della base di dati dovranno essere modificabili, cancellabili e estensibili dai docenti. Gli studenti, effettuando il login, potranno vedere le proprie valutazioni.
+
+### Blog
+Creare un portale web che mostri agli utenti collegati degli articoli pubblicati sul sito (e salvati in un apposita base di dati). Alcuni utenti (autori) potranno pubblicare o cancellare articoli (non è per ora richiesta la modifica).
+
+Gli articoli saranno mostrati mediante un'apposita pagina che riceve come parametro GET l'id univoco (chiave primaria) dell'articolo; dovrà essere disponibile una pagina che contenga l'indice degli articoli (generato dinamicamente mediante PHP).
