@@ -186,3 +186,31 @@ In questa lezione viene introdotto il legame tra PHP e basi di dati; in particol
 - consigli per risolvere l'esercizio in aula
 
 ### Esercizio in aula
+Costruire una base di dati utile a gestire i volumi contenuti in una biblioteca; in particolare la base di dati dovrà contenere una tabella contenente le seguenti informazioni relative ai libri:
+
+- titolo
+- autore
+- ISBN
+- data di restituzione
+
+Dove la data di restituzione è un campo che può assumere due tipologie di valori: una data se il libro è attualmente in prestito e _NULL_ se il libro è disponibile.
+
+Una volta costruita tale base di dati costruire usando HTML, CSS e PHP una pagina web che mostri in una tabella i vari volumi riportando le informazioni sopra salvate e, nel caso in cui il volume sia in prestito, la data di restituzione.
+
+Si noti che per verificare se la data di restituzione è un valore o è _NULL_ è possibile utilizzare la funzione `is_null()` di PHP.
+
+Per connettersi alla base di dati è possibile copiare all'interno della cartella _server_ il file `database.php` presente nella cartella _lezione7_ di questo repository; ovviamente tale file andrà richiesto dalla pagina PHP.
+
+## Lezione 8
+In questa lezione verranno ultimate le informazioni relative alla costruzione di siti web PHP mediante l'uso delle sessioni (e delle relative variabili) e alcuni cenni relativi alle funzioni di hash.
+
+### Teoria
+- concetto di sessione: cos'è e perché è utile
+- le variabili di sessione, concetto generale
+- avviare una sessione e concluderla in PHP
+- le variabili di sessione in PHP, dichiarazione, uso e distruzione
+- le funzioni di hash: presentazione della loro utilità e della loro logica di funzionamento
+- la funzioni di hash **MD5** e **SHA256** e il loro uso nel codice PHP
+- consigli per la risoluzione dell'esercizio in aula
+
+### Esercizio in aula
