@@ -13,7 +13,7 @@ Creare uno script PHP che una volta definite quattro variabili:
 - `$a = 4`
 - `$b = 5`
 - `$c = 'hello,`
-- `$c = ' world!'`
+- `$d = ' world!'`
 
 svolga le seguenti operazioni:
 
@@ -27,7 +27,7 @@ NB: per rendere più pulito l'output è opportuno usare l'istruzione `echo $vari
 ## Esercizio 2
 _Il costrutto if - else if - else_
 
-Dato lo script precedentemente costruito stampare mediante un costrutto `if- else if - else` quale tra le variabili `$a` e `$b` è la maggiore. In particolare l'utente dovrà vedere stampata la frase `La variabile b è la maggiore` se il valore di `$b` e maggiore di quello di `$a` o eventualmente il viceversa.
+Dato lo script precedentemente costruito stampare mediante un costrutto `if- else if - else` quale tra le variabili `$a` e `$b` è la maggiore. In particolare l'utente dovrà vedere stampata la frase `Il valore della variabile $b è maggiore del valore della variabile $a` se il valore di `$b` e maggiore di quello di `$a` o eventualmente il viceversa.
 
 ## Esercizio 3
 _Il costrutto while_
