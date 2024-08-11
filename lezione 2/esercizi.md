@@ -2,7 +2,7 @@ Esercizi
 ===
 _Lezione 2:_ i vettori in PHP
 
-Per affrontare i seguenti esercizi potrebbero essere utili le slide e eventuale documentazione reperita online.
+Per affrontare i seguenti esercizi potrebbero essere utili le slide ed eventuale documentazione reperita online.
 
 
 ## Esercizio 1
