@@ -5,10 +5,45 @@ _Lezione 5:_ PHP, HTML e richiami di JavaScript
 Per affrontare i seguenti esercizi potrebbero essere utili le slide ed eventuale documentazione reperita online.
 
 ## Esercizio 1
+_costruzione di un form_
+
+Creare una pagina HTML che includa un form che richieda i seguenti dati all'utente:
+
+- nome - mediante un input testuale
+- cognome - mediante un input testuale
+- mail - mediante un input testuale
+- telefono - mediante un input numerico
+- password - mediante un input di tipo password
+- colore preferito - mediante un input di colore
 
 ## Esercizio 2
+_invio di un form a uno script PHP_
+
+Creare una pagina HTML contenente un form con _action_ impostata a _elabora.php_ e _method_ impostato a _POST_ che richieda l'indirizzo mail di un utente, tale input dovrà avere i seguenti parametri impostati:
+
+- _name_ impostato a _mail_
+- _placeholder_ impostato a _Indirizzo Mail_
+- _required_ impostato (non è necessario inserire un valore, basta mettere la keyword _required_ prima di chiudere il tag)
+
+Aggiungere dunque un input di tipo submit.
+
+Scrivere dunque uno script PHP denominato _elabora.php_ collocato nella stessa cartella della pagina HTML precedente che svolga le seguenti operazioni:
+
+- estrapoli l'indirizzo mail inserito dall'utente nel form mediante l'uso di un vettore globale
+- lo stampi nella pagina
 
 ## Esercizio 3
+_creazione di notifiche_
+
+Creare una pagina HTML al cui interno viene riportata la chiamata allo script per l'uso delle Swal2 (copiarla direttamente dalle slide) e definire, mediante il tag _script_ HTML, uno script JavaScript che chiami una notifica Swal2 con i seguenti connotati:
+
+- deve mostrare l'icona di avvertimento (warning)
+- il titolo deve essere impostato a _Notifica di prova_
+- deve riportare il testo _Questa notifica mostra tutti gli elementi possibili_
+- deve mostrare i tasti di chiusura, conferma e annullamento
+- il testo del tasto di annullamento deve essere _Annulla_
+- il testo del tasto di conferma deve essere _Conferma_
+
 
 ## Esercizio 4 - svolto
 _utente_

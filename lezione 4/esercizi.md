@@ -5,8 +5,28 @@ _Lezione 4:_ PHP, HTML e le richieste GET e POST
 Per affrontare i seguenti esercizi potrebbero essere utili le slide ed eventuale documentazione reperita online.
 
 ## Esercizio 1
+_passaggio di parametri GET_
+
+Costruire uno script denominato _index.php_ che svolga le seguenti operazioni:
+
+- controlli se è avvenuta una richiesta di tipo GET
+- in caso affermativo controlli se è stato impostato il parametro _azione_
+- se è stato impostato il parametro _azione_ ne stampi il valore altrimenti stampi _Richiesta GET senza parametri_
+
+Provare lo script appena creato raggiungendolo navigando con il browser all'indirizzo `localhost/index.php?azione=1` o eventualmente modificando il valore del parametro _azione_. Cosa succede modificando il nome del parametro raggiungendo la pagina?
+
+Cosa succederebbe se effettuassimo una richiesta POST alla pagina? Potremo farlo come facciamo con le richieste GET o dovremo usare altri strumenti più complessi?
 
 ## Esercizio 2
+_da vettori associativi a JSON e viceversa_
+
+Definire un vettore associativo che associ alle chiavi _sinistra_, _destra_, _davanti_, _indietro_ i nomi dei compagni di classe posti in tale direzione sotto forma di un vettore classico. Il vettore finale dovrà dunque essere un vettore associativo che associa alle chiavi precedentemente specificate quattro vettori (al massimo monoelemento o vuoti).
+
+Mediante le funzioni presentate a lezione di teoria codificare ora il vettore come stringa JSON; tale stringa andrà stampata a schermo e memorizzata all'interno di una variabile chiamata `$stringa_json`.
+
+Utilizzare ora il complementare della funzione appena utilizzata per ricreare un vettore associativo. Cosa succede se omettiamo il secondo parametro `true`? Otteniamo lo stesso un vettore associativo o qualcosa di diverso?
+
+E se al posto di quattro vettori classici fossero vettori associativi? La risposta alla domanda precedente sarebbe la stessa?
 
 ## Esercizio 3
 _province_

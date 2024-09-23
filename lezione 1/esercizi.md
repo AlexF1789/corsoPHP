@@ -12,7 +12,7 @@ Creare uno script PHP che una volta definite quattro variabili:
 
 - `$a = 4`
 - `$b = 5`
-- `$c = 'hello,`
+- `$c = 'hello,'`
 - `$d = ' world!'`
 
 svolga le seguenti operazioni:
