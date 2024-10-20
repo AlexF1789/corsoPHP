@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html lang="it-IT">
+    <head>
+        <title>Coding - quiz iniziale</title>
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" href="sources/images/php.svg">
+        <link rel="stylesheet" href="sources/style/bootstrap.css" type="text/css">
+        <link rel="stylesheet" href="sources/style/swal.css" type="text/css">
+        <link rel="stylesheet" href="sources/style/main.css" type="text/css">
+    </head>
+
+    <body>
+        <script src="sources/script/bootstrap.js" type="text/javascript"></script>
+        <script src="sources/script/swal2.js" type="text/javascript"></script>
+        <script src="sources/script/jquery.js" type="text/javascript"></script>
+        <script src="sources/script/inviaRisposta.js" type="text/javascript" defer></script>
+
+        <header>
+            <img src="sources/images/php.svg">
+            <h1>Quiz iniziale</h1>
+        </header>
+
+        <section>
+            <h1>Corso di avvicinamento al Coding 2</h1>
+            <p>Tramite questo quiz iniziale (completamente anonimo) avremo una base di discussione da cui partire per la prima lezione.<br><br>I dati sono raccolti anonimamente e salvati sul computer del docente. Verranno cancellati al termine della lezione.</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h3>Domande generali</h3>
+            <p style="text-align: center">Queste sono domande generali circa la tua conoscenza riguardo alla programmazione e al tuo pensiero su di essa</p>
+
+            <hr>
+
+            <div class="container my-5">
+                <div class="row p-4 pb-0 pe-lg-0 py-lg-5 align-items-center rounded-3 border shadow-lg">
+                    <h6 class="titoloDomanda" id="everProgrammato">Hai mai programmato?</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="everProgrammato" id="everProgrammato_true">
+                        <label class="form-check-label" for="everProgrammato_true">Sì</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="everProgrammato" id="everProgrammato_false">
+                        <label class="form-check-label" for="everProgrammato_false">No</label>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="container my-5">
+                <div class="row p-4 pb-0 pe-lg-0 py-lg-5 align-items-center rounded-3 border shadow-lg">
+                    <h6 class="titoloDomanda">Se hai risposto di sì alla domanda precedente, in quali linguaggi hai già programmato? Se non lo hai mai fatto lascia in bianco la risposta</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="C" id="languages_C">
+                        <label class="form-check-label" for="languages_C">C / C++</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Java" id="languages_Java">
+                        <label class="form-check-label" for="languages_Java">Java / C#</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Python" id="languages_Python">
+                        <label class="form-check-label" for="languages_Python">Python / JavaScript</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="PHP" id="languages_PHP">
+                        <label class="form-check-label" for="languages_PHP">PHP</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="HTML" id="languages_HTML">
+                        <label class="form-check-label" for="languages_HTML">HTML / CSS *</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="SQL" id="languages_SQL">
+                        <label class="form-check-label" for="languages_SQL">SQL *</label>
+                    </div>
+                    <p class="mt-2"><b>*</b> non sono veri e propri linguaggi di programmazione ma ne rispettano alcuni aspetti quali la sintassi</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="container my-5">
+                <div class="row p-4 pb-0 pe-lg-0 py-lg-5 align-items-center rounded-3 border shadow-lg">
+                    <h6 class="titoloDomanda">Trovi la programmazione un metodo per risolvere problemi?</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="solveProblems" id="solveProblems_true">
+                        <label class="form-check-label" for="solveProblems_true">Sì</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="solveProblems" id="solveProblems_false">
+                        <label class="form-check-label" for="solveProblems_false">No, piuttosto me li crea</label>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="container my-5">
+                <div class="row p-4 pb-0 pe-lg-0 py-lg-5 align-items-center rounded-3 border shadow-lg">
+                    <h6 class="titoloDomanda">Ritieni che nell'atto di programmare sia più importante scrivere codice rispetto a sviluppare un algoritmo efficace (e possibilmente efficiente)</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="algoVScode" id="algoVScode_true">
+                        <label class="form-check-label" for="algoVScode_true">Sì</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="algoVScode" id="algoVScode_false">
+                        <label class="form-check-label" for="algoVScode_false">No</label>
+                    </div>
+                </div>
+            </div>
+            
+            <hr>
+
+            <div class="container my-5">
+                <div class="row p-4 pb-0 pe-lg-0 py-lg-5 align-items-center rounded-3 border shadow-lg">
+                    <h6 class="titoloDomanda">Ritieni che programmare sarà un'attività ricercata nel tuo curriculum?</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="futureSkill" id="futureSkill_true">
+                        <label class="form-check-label" for="futureSkill_true">Sì</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="futureSkill" id="futureSkill_false">
+                        <label class="form-check-label" for="futureSkill_false">No</label>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="container my-5">
+                <div class="row p-4 pb-0 pe-lg-0 py-lg-5 align-items-center rounded-3 border shadow-lg">
+                    <h6 class="titoloDomanda">La presenza di esami attinenti alla programmazione ti rende titubante sulla scelta di un futuro percorso universitario?</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="scaredUni" id="scaredUni_true">
+                        <label class="form-check-label" for="scaredUni_true">Sì</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="scaredUni" id="scaredUni_false">
+                        <label class="form-check-label" for="scaredUni_false">No</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section>
+            <h3>Domande sul web development</h3>
+            <p style="text-align: center">Queste sono domande sullo sviluppo web (o <i>web development</i>) ovvero il tema su cui verterà il corso</p>
+
+            <hr>
+
+            <div class="container my-5">
+                <div class="row p-4 pb-0 pe-lg-0 py-lg-5 align-items-center rounded-3 border shadow-lg">
+                    <h6 class="titoloDomanda">Hai mai creato un sito web? (anche usando CMS come WordPress, Moodle o Joomla)</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="webDeveloped" id="webDeveloped_true">
+                        <label class="form-check-label" for="webDeveloped_true">Sì</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="webDeveloped" id="webDeveloped_false">
+                        <label class="form-check-label" for="webDeveloped_false">No</label>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="container my-5">
+                <div class="row p-4 pb-0 pe-lg-0 py-lg-5 align-items-center rounded-3 border shadow-lg">
+                    <h6 class="titoloDomanda">Se sì, hai usato un CMS come WordPress, Moodle, Joomla o altri? Se hai risposto no alla domanda precedente lascia in bianco questa</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="usedCMS" id="usedCMS_true">
+                        <label class="form-check-label" for="usedCMS_true">Sì</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="usedCMS" id="usedCMS_false">
+                        <label class="form-check-label" for="usedCMS_false">No</label>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+        </section>
+
+        <section>
+            <h3>Domande sull'amministrazione di sistema</h3>
+            <p style="text-align: center">Queste domande vertono sulla parte più teorica del corso ovvero sui fondamenti di base dello sviluppo web</p>
+        
+            <hr>
+
+            <div class="container my-5">
+                <div class="row p-4 pb-0 pe-lg-0 py-lg-5 align-items-center rounded-3 border shadow-lg">
+                    <h6 class="titoloDomanda">Hai mai progettato una base di dati o comunque sai a cosa ci si riferisce quando si parla di database? (anche in maniera approssimativa)</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="knowDB" id="knowDB_true">
+                        <label class="form-check-label" for="knowDB_true">Sì</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="knowDB" id="knowDB_false">
+                        <label class="form-check-label" for="knowDB_false">No</label>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="container my-5">
+                <div class="row p-4 pb-0 pe-lg-0 py-lg-5 align-items-center rounded-3 border shadow-lg">
+                    <h6 class="titoloDomanda">Sai cosa significa che un'architettura di rete è di tipo client-server?</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="knowCS" id="knowCS_true">
+                        <label class="form-check-label" for="knowCS_true">Sì</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="knowCS" id="knowCS_false">
+                        <label class="form-check-label" for="knowCS_false">No</label>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="container my-5">
+                <div class="row p-4 pb-0 pe-lg-0 py-lg-5 align-items-center rounded-3 border shadow-lg">
+                    <h6 class="titoloDomanda">Hai mai sentito parlare di server? Sapresti cosa si intende (anche in maniera approssimativa)?</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="knowServer" id="knowServer_true">
+                        <label class="form-check-label" for="knowServer_true">Sì</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="knowServer" id="knowServer_false">
+                        <label class="form-check-label" for="knowServer_false">No</label>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="container my-5">
+                <div class="row p-4 pb-0 pe-lg-0 py-lg-5 align-items-center rounded-3 border shadow-lg">
+                    <h6 class="titoloDomanda">Hai mai sentito parlare di Linux?</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="knowLinux" id="knowLinux_true">
+                        <label class="form-check-label" for="knowLinux_true">Sì</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="knowLinux" id="knowLinux_false">
+                        <label class="form-check-label" for="knowLinux_false">No</label>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+        </section>
+
+        <section>
+            <h3>Sicurezza informatica</h3>
+            <p style="text-align: center">Queste domande vertono su alcuni temi teorici avanzati che vedremo alla fine del corso.</p>
+
+            <hr>
+
+            <div class="container my-5">
+                <div class="row p-4 pb-0 pe-lg-0 py-lg-5 align-items-center rounded-3 border shadow-lg">
+                    <h6 class="titoloDomanda">Sai cosa si intende per crittografia (anche vagamente)?</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="knowCrypt" id="knowCrypt_true">
+                        <label class="form-check-label" for="knowCrypt_true">Sì</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="knowCrypt" id="knowCrypt_false">
+                        <label class="form-check-label" for="knowCrypt_false">No</label>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="container my-5">
+                <div class="row p-4 pb-0 pe-lg-0 py-lg-5 align-items-center rounded-3 border shadow-lg">
+                    <h6 class="titoloDomanda">Sai cosa significa <i>crittografia end-to-end</i>, l'hai mai letta in qualche app che usi?</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="knowEtE" id="knowEtE_true">
+                        <label class="form-check-label" for="knowEtE_true">Sì</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="knowEtE" id="knowEtE_false">
+                        <label class="form-check-label" for="knowEtE_false">No</label>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="container my-5">
+                <div class="row p-4 pb-0 pe-lg-0 py-lg-5 align-items-center rounded-3 border shadow-lg">
+                    <h6 class="titoloDomanda">Sai cosa significa il lucchetto che compare quando visiti alcuni siti web?</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="knowHTTPS" id="knowHTTPS_true">
+                        <label class="form-check-label" for="knowHTTPS_true">Sì</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="knowHTTPS" id="knowHTTPS_false">
+                        <label class="form-check-label" for="knowHTTPS_false">No</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="text-center">
+            <button class="btn btn-primary mx-auto my-5" onclick="inviaRisposta()">Invia</button>
+        </div>
+    </body>
+</html>
