@@ -1,0 +1,98 @@
+@font-face {
+    font-family: Fira Sans Regular;
+    src: url('FiraSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: Fira Sans ExtraBold;
+    src: url('FiraSans-ExtraBold.ttf');
+}
+
+:root {
+    --titleColor: #666666;
+    --textColor: #808080;
+    --viola: #74609e;
+    --violaSelezionato: #8f7db5;
+    --violaAttivo: #ad9bd4;
+}
+
+body {
+    font-family: 'Fira Sans Regular';
+    color: var(--textColor);
+}
+
+header {
+    background-color: var(--viola);
+    padding: 1%;
+}
+
+header > img {
+    height: 12vh;
+}
+
+header > h1 {
+    display: inline-block;
+    line-height: 12vh;
+    margin-left: 4%;
+    font-size: 300%;
+    vertical-align: middle;
+    color: white;
+    font-family: 'Fira Sans ExtraBold'
+}
+
+section {
+    margin: 3%;
+}
+
+section > h1, section > h3, section > h6, .titoloDomanda {
+    font-family: 'Fira Sans ExtraBold';
+    color: var(--titleColor);
+    margin-bottom: 2%;
+}
+
+section > h3 {
+    text-align: center;
+}
+
+section > p {
+    color: var(--textColor);
+}
+
+hr {
+    width: 75%;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border: 2px solid var(--titleColor);
+}
+
+.form-check {
+    margin-left: 2%;
+}
+
+.btn-primary {
+	--bs-btn-color: #fff;
+	--bs-btn-bg: var(--viola);
+	--bs-btn-border-color: var(--viola);
+	--bs-btn-hover-color: white;
+	--bs-btn-hover-bg: var(--violaSelezionato);
+	--bs-btn-hover-border-color: var(--violaSelezionato);
+	--bs-btn-focus-shadow-rgb: 143, 125, 181;
+	--bs-btn-active-color: #fff;
+	--bs-btn-active-bg: var(--violaAttivo);
+	--bs-btn-active-border-color: var(--violaAttivo);
+	--bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+	--bs-btn-disabled-color: #fff;
+	--bs-btn-disabled-bg: var(--viola);
+	--bs-btn-disabled-border-color: var(--viola);
+}
+
+.wrapperGrafico {
+    height: 450px;
+    margin: auto;
+    text-align: center;
+}
+
+canvas {
+    margin-left: 20%;
+}
