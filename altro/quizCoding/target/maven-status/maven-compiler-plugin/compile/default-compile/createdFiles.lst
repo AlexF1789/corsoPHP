@@ -1,5 +1,5 @@
-alexf1789\quizcoding\Database.class
-alexf1789\quizcoding\JakartaRestConfiguration.class
-alexf1789\quizcoding\resources\JakartaEE10Resource.class
-quiz\inviaRisposta.class
-quiz\getRisposte.class
+quiz/inviaRisposta.class
+alexf1789/quizcoding/resources/JakartaEE10Resource.class
+alexf1789/quizcoding/Database.class
+quiz/getRisposte.class
+alexf1789/quizcoding/JakartaRestConfiguration.class

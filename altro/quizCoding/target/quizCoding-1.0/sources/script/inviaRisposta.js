@@ -91,6 +91,53 @@ const domande = [
     }
 ]
 
+// reindirizziamo nel caso in cui sia già stata data una risposta
+
+if(location.href.lastIndexOf('?')!=-1) {
+    let params = location.href.split('?').at(-1)
+    
+    params = params.split('=')
+    
+    for(let i=0;i<params.length-1;i++) {
+        if(params[i] == 'passthrough') {
+            if(params[i+1] == '1')
+                cancellaCookieRisposta()
+            break
+        }
+    }
+}
+
+if(document.cookie != '') {
+    let cookies = document.cookie.split('=')
+    
+    for(let i=0;i<cookies.length-1;i++) {
+        if(cookies[i] == 'risposto') {
+            if(cookies[i+1] == '1')
+                window.location.href = 'giaRisposto.html'
+            break
+        }
+    }
+}
+
+// aggiungiamo gli event listener per il doppio click
+domande.forEach((domanda) => {
+    if(domanda.type == 'radio_tf') {
+        $('#'+domanda.ID).on('dblclick', resetRisposta(domanda.ID))
+    }
+})
+
+function resetRisposta(id_domanda) {
+    document.getElementById(id_domanda+'_true').checked = false
+    document.getElementById(id_domanda+'_false').checked = false
+}
+
+function cancellaCookieRisposta() {
+    let date = new Date()
+    date.setHours(date.getHours()-1)
+    
+    document.cookie = 'risposto=; expires='+date+'; SameSite=strict; path=/;'
+}
+
 function inviaRisposta() {
     let campi = {}
 
@@ -133,6 +180,11 @@ function inviaRisposta() {
                     customClass: {
                         confirmButton: 'btn btn-primary'
                     }
+                }).then(() => {
+                    let data_scadenza = new Date()
+                    data_scadenza.setHours(data_scadenza.getHours()+1)
+                    document.cookie = 'risposto=1; expires='+data_scadenza+'; path=/; SameSite=strict;'
+                    location.reload()
                 })
             } else {
                 Swal.fire({
