@@ -14,7 +14,7 @@ Ai seguenti link è possibile trovare le istruzioni di configurazione del propri
 - [Windows](https://github.com/AlexF1789/corsoPHP/wiki/Windows)
 - [macOS](#)
 - [Linux](#)
-- [Replit](#) - ambiente web per dispositivi mobili (o altre esigenze, NB: si avanno delle importanti limitazioni spiegate nella guida)
+- [Online GDB](https://www.onlinegdb.com/) - ambiente web per dispositivi mobili (o altre esigenze, NB: si avanno delle importanti limitazioni spiegate nella guida, impostare come linguaggio PHP)
 
 # Per altre informazioni
 Per informazioni, correzione di errori o osservazioni è possibile aprire una _Issue_ mediante l'apposita sezione di questo repository.
