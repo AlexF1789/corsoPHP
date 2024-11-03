@@ -1,18 +1,21 @@
+# -------------------- generaUtenti.py -------------------
 # script per generare i dati demo della base di dati
+# naturalmente tutti i dati sono puramente di fantasia
+# e vengono scelti in maniera del tutto casuale da due vettori
+# che contengono cognomi e nomi più frequenti
 
 import random
 import string
-from pprint import pprint
+from pprint import pprint # per le eventuali stampe di debug
 
-# costanti
+# definizione delle costanti
 NUM_UTENTI = 1000
 LEN_CODICE_UTENTE = 8
 NUM_CARTE = 1750
 LEN_CODICE_CARTA = 10
 NUM_MOVIMENTI = 5250
 
-# vettori con dati da scegliere
-
+# definizione dei vettori (e delle stringhe) con dati da scegliere
 cognomi = [
     "Rossi",
     "Russo",
@@ -102,7 +105,6 @@ caratteri_codice_carte = '0123456789'
 caratteri_codice_utente = string.ascii_uppercase + caratteri_codice_carte
 
 # funzioni di generazione codici
-
 def genera_codici(codici, lunghezza, caratteri_possibili):
     valido = False
     codice = ''
@@ -119,6 +121,7 @@ def genera_codici(codici, lunghezza, caratteri_possibili):
 
     return codice
 
+# funzione di generazione della data
 def genera_data(futura):
     data = list()
 
@@ -145,6 +148,7 @@ def genera_data(futura):
 
     return '-'.join(data)
 
+# funzioni per scrivere su un file già aperto (passato come parametro) le query di inserimento SQL
 def scrivi_utente(utente, file):
     stringa = f"INSERT INTO `utenti`(`codice`, `cognome`, `nome`, `dataNascita`) VALUES ('{utente['codice']}','{utente['cognome']}','{utente['nome']}','{utente['data_nascita']}');"
     file.write(stringa+'\n')

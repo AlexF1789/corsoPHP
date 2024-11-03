@@ -257,4 +257,12 @@ A partire dallo stesso sviluppare le seguenti pagine:
 - `schedaUtente.php` che fungerà da pagina scheda utente che, ricevendo come parametro GET il codice dell'utente, ne mostrerà tutti i dati con, in formato tabellare, le carte di credito registrate (ciascuna riporterà un link per raggiungere la pagina scheda carta di credito)
 - `schedaCarta.php` che fungerà da pagina scheda carta di credito che, ricevendo come parametro GET il codice della carta, ne mostra cognome e nome dell'intestatario (che sarà un link che porta alla scheda utente) insieme ai movimenti della carta in formato tabellare
 
-Provare a determinare in autonomia come avviene il salvataggio delle informazioni nella base di dati; alternativamente consultare il modello ER presente nella cartella _carteCredito_
+Provare a determinare in autonomia come avviene il salvataggio delle informazioni nella base di dati; alternativamente consultare il modello ER presente nella cartella _carteCredito_.
+
+## Stazione radiofonica
+
+Una stazione radiofonica vi incarica di creare un portale per gestire le richieste musicali per la programmazione musicale. Tale portale dovrà essere composto dalle seguenti pagine:
+- `index.php` che fungerà da homepage e che conterrà in formato tabellare le richieste musicali pervenute fino a quel momento e che conterrà, in cima alla tabella, un form HTML contenente i campi _titolo_, _autore_, _anno_ di eventuali canzoni richieste;
+- `inviaRichiesta.php` che si occuperà di salvare la richiesta musicale e che, una volta fatto ciò, reindirizzi l'utente alla pagina `index.php` con uno stato di uscita (errore o successo) che corrisponderà all'invio di una notifica all'utente.
+
+Per creare il portale sarà necessario creare una base di dati opportuna per poi interrogarla nella pagina `index.php` e inserire i dati nella pagina `inviaRichiesta`; provare a creare in autonomia tale base di dati e controllare la corretta base di dati usando il modello ER presente nella cartella _stazioneRadiofonica_.

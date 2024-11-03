@@ -2,7 +2,7 @@ const express = require('express')
 const mariadb = require('mariadb')
 
 const app = express()
-const porta = 80
+const porta = 3000
 
 app.use(express.static('static'))
 app.use(express.json())
@@ -81,6 +81,7 @@ app.post('/getRisposte', (req, res) => {
         }
 
         res.send(risposta_finale)
+        console.log('accesso alle risposte da '+req.ip)
 
         db.chiudiPool()
     })
