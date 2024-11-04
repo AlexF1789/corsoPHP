@@ -2,7 +2,7 @@ const express = require('express')
 const mariadb = require('mariadb')
 
 const app = express()
-const porta = 3000
+const porta = 80
 
 app.use(express.static('static'))
 app.use(express.json())
