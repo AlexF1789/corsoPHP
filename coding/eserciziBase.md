@@ -18,17 +18,22 @@ _Competenze:_ manipolazione di variabili e numeri
 
 Scrivere un programma che dato un numero ne estragga la radice quadrata, la radice cubica, il quadrato e il cubo. Stampare tutto a schermo.
 
-## 1.3 Media di 3 voti
+## 1.3 Funzioni goniometriche
+_Competenze:_ manipolazione di variabili e numeri, funzioni goniometriche
+
+Scrivere un programma che, dati due angoli, ne calcoli il coseno e il seno della somma sfruttando le opportune formule goniometriche; stamparli successivamente a schermo.
+
+## 1.4 Media di 3 voti
 _Competenze:_ manipolazione di variabili e numeri, costrutti _if - else if - else_
 
 Scrivere un programma che dati tre voti salvati sotto forma di variabili ne calcoli la media, la stampi e in base alla stessa riporti se lo studente è risultato essere sufficiente o insufficiente. Si può scegliere in autonomia la base della valutazione (per esempio decimi, quindicesimi, trentesimi, ...).
 
-## 1.4 Equazioni di secondo grado
+## 1.5 Equazioni di secondo grado
 _Competenze:_ manipolazione di variabili e numeri, costrutti _if - else if - else_
 
 Scrivere un programma che, dati i tre coefficienti di una funzione polinomiale di secondo grado, calcoli le soluzioni della corrispondente equazione di secondo grado associata. Stampare a schermo tali risultati.
 
-## 1.5 Equazioni di secondo grado con casi particolari
+## 1.6 Equazioni di secondo grado con casi particolari
 _Competenze:_ manipolazione di variabili e numeri, costrutti _if - else if - else_
 
 Ampliare il programma precedente di modo che riconosca i casi particolari in cui uno dei tre coefficienti (naturalmente escluso quello del termine di secondo grado) sia nullo; stampare anche un messaggio nel caso in cui le soluzioni non siano reali ma complesse.
@@ -76,4 +81,22 @@ Questi esercizi richiedono l'uso di strutture dati complesse ovvero non fornite 
 # 3.1 media ponderata
 _Competenze:_ manipolazione e creazione di vettori annidati
 
-Realizzare un programma che sfruttando la seguente struttura dati ne calcoli 
+Realizzare un programma che sfruttando la seguente struttura dati ne calcoli la media ponderata.
+
+```
+$valori = [
+    [
+        'valore' => x1,
+        'peso' => y1
+    ],
+
+    [
+        'valore' => x2,
+        'peso' => y2
+    ]
+];
+```
+
+Si noti che x1, y1, x2, y2 sono sostituiti da valori numerici e che i valori all'interno del vettore possono essere aggiunti in maniera arbitraria.
+
+## 3.2 
