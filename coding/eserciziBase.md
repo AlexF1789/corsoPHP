@@ -63,12 +63,12 @@ _Competenze:_ manipolazione di variabili, vettori, matrici e numeri
 
 Dato un sistema 2x2 scrivere un programma che lo risolva utilizzando il metodo di Cramer.
 
-# 2.5 Ricerca lineare del massimo e del minimo di un vettore
+## 2.5 Ricerca lineare del massimo e del minimo di un vettore
 _Competenze:_ manipolazione di variabili, vettori, matrici e numeri, il ciclo _for_ e i costrutti _if - else if - else_
 
 Dato un vettore di interi stabilirne l'elemento massimo e l'elemento minimo usando un approccio lineare (scandendo uno per uno gli elementi del vettore e aggiornando l'attuale minimo e massimo). Stampare poi tali valori a video.
 
-# 2.6 Ricerca lineare dell'elemento maggioritario
+## 2.6 Ricerca lineare dell'elemento maggioritario
 _Competenze:_ manipolazione di variabili, vettori, matrici e numeri, il ciclo _for_ e i costrutti _if - else if - else_
 
 L'elemento maggioritario di un vettore di N elementi è definito come l'elemento, se esiste, presente almeno N/2 + 1 volte. Per esempio nel vettore [1,2,2,2,1,2,4,2] l'elemento maggioritario è 2 mentre nel vettore [1,2] non esiste elemento maggioritario.
@@ -78,7 +78,7 @@ Scrivere un programma che dato un vettore determini se è presente un elemento m
 # 3 - strutture dati complesse
 Questi esercizi richiedono l'uso di strutture dati complesse ovvero non fornite in autonomia dal linguaggio di programmazione; dovremo infatti adoperare delle strutture dati create ad hoc sfruttando alcuni principi come l'annidazione (vettori all'interno di vettori) o, eventualmente _oggetti_ (non obbligatoriamente, è comunque possibile usarle se si hanno conoscenze pregresse di programmazione a oggetti).
 
-# 3.1 media ponderata
+## 3.1 media ponderata
 _Competenze:_ manipolazione e creazione di vettori annidati
 
 Realizzare un programma che sfruttando la seguente struttura dati ne calcoli la media ponderata.
@@ -99,4 +99,8 @@ $valori = [
 
 Si noti che x1, y1, x2, y2 sono sostituiti da valori numerici e che i valori all'interno del vettore possono essere aggiunti in maniera arbitraria.
 
-## 3.2 
+## 3.2 JSON
+_Competenze:_ manipolazione di strutture dati mediante il formato JSON
+
+Date le specifiche dell'esercizio precedente implementare due funzioni che si occupino di esportare ed importare i dati in ingresso mediante il formato JSON.
+In particolare la funzione di esportazione stamperà a schermo in formato JSON il valore di ingresso e, se richiesto, il risultato mentre la funzione di importazione scriverà su un vettore passato per riferimento il contenuto di una stringa JSON opportunamente convertito in una struttura dati compatibile con PHP.
