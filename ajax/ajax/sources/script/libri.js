@@ -17,9 +17,24 @@ function estraiLibri() {
     // aggiorniamo i campi di testo
     aggiornaLimitOffset(limit, offset)
 
+    // determiniamo il server a cui formulare la richiesta
+    switch(parseInt($('#server').val())) {
+        case 1:
+            server = 'sources/php/getLibri.php'
+            break
+        case 2:
+            server = 'http://localhost:8080/getLibri'
+            break
+        default:
+            server = ''
+            window.alert('Errore nella selezione del server!')
+            break
+    }
+
     // ricaviamo dal backend l'elenco dei libri in formato JSON
-    $.ajax('sources/php/getLibri.php', {
+    $.ajax(server, {
         type: 'GET',
+        crossDomain: true,
         data: {
             offset: offset,
             limit: limit

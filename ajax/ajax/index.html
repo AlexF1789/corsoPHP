@@ -36,6 +36,11 @@
             <article id="contenitoreTabella">
                 <label for="offset">ignora i primi</label><input id="offset" type="number" onclick="" placeholder="offset" value="0"><br>
                 <label for="limit">numero libri</label><input id="limit" type="number" onclick="" placeholder="limit" value="15"><br>
+                <label for="server">Server da usare</label>
+                <select id="server">
+                    <option value="1">PHP</option>
+                    <option value="2">Java</option>
+                </select><br><br>
                 <button id="estrai" onclick="estraiLibri()">Estrai libri</button>
                 <button id="reset" style="margin-left: 1%" onclick="resetLibri()">Reset</button>
 
