@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+header {
+    background-color: orange;
+    color: white;
+    padding: 1%;
+}
+
+section {
+    margin: 5%;
+}
+
+article {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#contenitoreTabella table {
+    width: 80%;
+    text-align: center;
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: 5%;
+}
+
+#contenitoreTabella table td, #contenitoreTabella table th {
+    text-align: center;
+    padding: 0.5vw;
+}
+
+.nonTrovato {
+    color: red;
+    font-weight: bold;
+}
+
+input {
+    margin-bottom: 1%;
+}
+
+label {
+    margin-right: 2%;
+}

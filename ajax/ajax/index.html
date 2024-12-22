@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+    <head>
+        <title>Libri</title>
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" href="sources/style/style.css" type="text/css">
+
+        <!-- colleghiamo anche due script JavaScript: il framework JQuery e uno script che ci consentirà di estrarre i libri e collocarli in tabella -->
+        <script type="text/javascript" src="sources/script/jquery.js"></script>
+        <script type="text/javascript" src="sources/script/libri.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>Libri con Ajax</h1>
+        </header>
+        
+        <section>
+            <article>
+                <!-- spiegazione iniziale (testo della pagina) -->
+                <h1>Estrazione libri con Ajax</h1>
+                <p>L'approccio di questa seconda soluzione è completamente opposto e si basa su più interazioni tra client e server con diversa logica e peso.</p>
+                <br>
+                <p>L'idea di base è quella di scindere il trasferimento delle risorse <b>statiche</b> dai dati (dinamici) contenuti nella pagina. In particolare in un primo tempo il server invierà al client la pagina in formato <b>.html</b>, i fogli CSS, gli script JavaScript e tutti gli altri elementi che la compongono; una volta che è terminato tale caricamento il client mediante codice <b>JavaScript</b> formulerà una richiesta Ajax ad un apposito script collocato sul server con la funzione di estrarre i dati e stamparli sulla pagina; potete vederne il funzionamento raggiungendo <a href="sources/php/getLibri.php" target="_blank">questo link</a> e provando a modificare i parametri get <i>limit</i> e <i>offset</i>. Questa soluzione ha come <b>vantaggi</b> la possibilità di scindere completamente il <i>frontend</i> ovvero la pagina visualizzata dall'utente con i relativi script dal <i>backend</i> ovvero lo script che estrae i libri. Il principale <b>svantaggio</b> è legato al codice da scrivere che è decisamente di più e più diversificato (dobbiamo usare più linguaggi di programmazione e farli interagire con un formato come JSON o XML).<br><br>Pertanto <b>riassumendo</b>:</p>
+
+                <ul>
+                    <li>approccio più moderno e versatile</li>
+                    <li>scinde completamente il <i>frontend</i> dal <i>backend</i> consentendo di cambiare a costo minore il linguaggio di programmazione del <i>backend</i> e facilitando l'eventuale scrittura di altro software (programmi desktop o applicazioni mobile)</li>
+                    <li>adopera JSON come formato di trasmissione dei dati</li>
+                    <li>non richiede il ricaricamento della pagina e dunque dà l'impressione di essere più fluido</li>
+                    <li>è più leggero per il server che non deve reinviare l'intero <i>malloppo</i> di file statici a ogni caricamento</li>
+                </ul>   
+            </article>
+
+            <article id="contenitoreTabella">
+                <label for="offset">ignora i primi</label><input id="offset" type="number" onclick="" placeholder="offset" value="0"><br>
+                <label for="limit">numero libri</label><input id="limit" type="number" onclick="" placeholder="limit" value="15"><br>
+                <button id="estrai" onclick="estraiLibri()">Estrai libri</button>
+                <button id="reset" style="margin-left: 1%" onclick="resetLibri()">Reset</button>
+
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Titolo</th>
+                            <th>Autore</th>
+                            <th>Anno Pubblicazione</th>
+                        </tr>
+                    </thead>
+                    <tbody id="contenutoTabella">
+                    </tbody>
+                </table>
+            </article>
+        </section>
+    </body>
+</html>
