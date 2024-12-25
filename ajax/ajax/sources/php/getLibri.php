@@ -1,6 +1,14 @@
 <?php
 
-    // script che estrae i libri dal database e li stampa in formato JSON a schermo, verrà usata come API dal client
+    // TEST JAVA
+
+    // togliendo il commento si può verificare come il server selezionato passi su Java e, nel caso in cui questo nno fosse avviato, verrà restituito
+    // errore sul client
+    //die;
+
+
+    
+    // SCRIPT PHP
 
     // impostiamo il contenuto della risposta su JSON
     header("Content-Type: application/json");

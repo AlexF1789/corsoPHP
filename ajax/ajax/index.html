@@ -30,7 +30,14 @@
                     <li>adopera JSON come formato di trasmissione dei dati</li>
                     <li>non richiede il ricaricamento della pagina e dunque dà l'impressione di essere più fluido</li>
                     <li>è più leggero per il server che non deve reinviare l'intero <i>malloppo</i> di file statici a ogni caricamento</li>
-                </ul>   
+                </ul>
+
+                <br>
+                <p>L'approccio con Ajax consente inoltre di usare le seguenti <b>feature avanzate</b>:</p>
+                <ul>
+                    <li>adoperare un approccio <b>multi-server</b> come in questo caso dove il server primario a cui si formula la richiesta per i libri è PHP e ne è presente uno Java che in questo esempio viene usato come server di backup nel momento in cui il server PHP non risponda o risponda negativamente</li>
+                    <li>mostrare gli <b>slider di caricamento</b></li>
+                </ul>
             </article>
 
             <article id="contenitoreTabella">
@@ -43,6 +50,10 @@
                 </select><br><br>
                 <button id="estrai" onclick="estraiLibri()">Estrai libri</button>
                 <button id="reset" style="margin-left: 1%" onclick="resetLibri()">Reset</button>
+                <br><br>
+
+                <!-- contenitore per l'icona di caricamento (che viene mostrata al caricamento dei libri) -->
+                <div id="contenitoreCaricamento"></div>
 
                 <table border="1">
                     <thead>

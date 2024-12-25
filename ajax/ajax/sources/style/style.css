@@ -43,3 +43,23 @@ input {
 label {
     margin-right: 2%;
 }
+
+#contenitoreCaricamento {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+
+.loader {
+    border: 0.25vw solid #f3f3f3;
+    border-top: 0.25vw solid lightseagreen;
+    border-radius: 50%;
+    width: 1vw;
+    height: 1vw;
+    animation: spin 2s linear infinite;
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+} 
